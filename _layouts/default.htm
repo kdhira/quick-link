@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ site.name }}</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
+    </head>
+    <body>
+        <div class="container content-wrapper">
+            <div id="header-section" class="row">
+                <div id="title" class="col-12">
+                    {% include header.htm %}
+                </div>
+            </div>
+
+            {% for file_hash in site.data.links %}
+            {% assign file = file_hash[1] %}
+            {% for lg in file %}
+            <div class="link-group">
+                <div class="row link-group-header">
+                    <div class="col-12 link-header-card">
+                            {% if lg.url != null %}
+                            <a href="{{ lg.url }}" title="{{ lg.url }}">{{ lg.heading }}</a>
+                            {% else %}
+                            {{ lg.heading }}
+                            {% endif %}
+                    </div>
+                    <div class="col-12">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row link-group-content">
+                    <div class="col-12">
+                    {% for link in lg.links %}
+                    <div class="link-card">
+                        <span><a href="{{ link.url }}" title="{{ link.url }}">{{ link.name }}</a></span>
+                    </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+
+            <div id="footer" class="row">
+                <div class="col-12">
+                    <hr />
+                    {% include footer.htm %}
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

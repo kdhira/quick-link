@@ -1,0 +1,11 @@
+- heading: Example
+  url: http://google.com
+  links:
+      - name: Facebook
+        url: http://facebook.com
+      - name: Twitter
+        url: http://twitter.com
+- heading: More Examples
+  links:
+      - name: Youtube
+        url: http://youtube.com

@@ -1,0 +1,76 @@
+---
+---
+
+$body-font: "Lato", sans-serif;
+$link-color: #005689;
+
+$bg-color: #eeeeee;
+$card-color: #ffffff;
+
+body {
+    font-family: $body-font;
+    background: $bg-color;
+    color: #000000;
+}
+
+div#header-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+div#title {
+    display: flex;
+    span {
+        margin: auto;
+    }
+}
+
+.link-group {
+
+    .link-group-header {
+        margin-top: 20px;
+
+        .link-header-card {
+            color: $link-color;
+            font-size: 1.25em;
+        }
+    }
+
+    .link-group-content {
+        .link-card {
+            margin: 10px;
+            min-height: 80px;
+            min-width: 80px;
+            display: inline-flex;
+            float: left;
+        }
+    }
+
+}
+.content-wrapper div {
+
+}
+
+.link-card {
+    background: $card-color;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    span {
+        margin: auto;
+    }
+    padding: 20px;
+}
+
+.link-group-content, .link-group-header {
+    a, a:link, a:visited, a:active, a:focus, a:hover {
+        color: $link-color;
+    }
+}
+
+div#footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.75em;
+    padding: 20px;
+}

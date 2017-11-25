@@ -1,0 +1,5 @@
+name: SITE NAME
+markdown: kramdown
+
+sass:
+    sass_dir: css
