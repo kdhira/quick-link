@@ -3,9 +3,9 @@ This is a mini-project that has the purpose of showing links to webpages all in 
 
 ## Installation
 1. Install Jekyll.
-2. Clone the repository.
-3. Add files \_includes/header.htm and \_includes/footer.htm
-    - Optionally add contents to these files if you want a header and/or footer
+2. Fork and clone the repository.
+3. Edit files \_includes/header.htm and \_includes/footer.htm
+    - Add contents to these files if you want a header and/or footer
       to your page.
 4. Look at \_data/links/example.yml. This is an example/template of how to add
    links and categories to the page. You can edit this file, or make another
